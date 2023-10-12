@@ -71,7 +71,7 @@ function Navbar() {
         <div className="w-2/12 bg-[#0e0e0e] rounded p-4 shadow-lg max-xl:hidden z-10">
           <div className="flex items-center space-x-4 p-2 mb-5">
             <div>
-              <h4 className="font-bold text-xl text-white capitalize font-serif tracking-wide">
+              <h4 className="font-bold text-xl text-white capitalize font-sans hover:font-serif tracking-wide">
                 Welcome{" "}
                 {username}{" "}
               </h4>

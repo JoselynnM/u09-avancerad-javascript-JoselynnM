@@ -1,18 +1,17 @@
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
+import Nav from "./components/Nav.jsx";
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <div className="flex flex-row items-center justify-center bg-gray-900">        
-      </div>
-      <div className="bg-gray-800 p-20" >
      
+      <div className="bg-[url('/images/roadbg.webp')] p-20 w-full h-200 md:h-150 lg:h-144 bg-cover bg-center">
+      <Nav></Nav>
 
-      <Outlet  /></div>
-      <Footer></Footer>
+      <Outlet  />
+      <Footer></Footer></div>
+      
     </>
   );
 }

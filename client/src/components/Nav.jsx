@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {CgMenuGridR} from "react-icons/cg"
+import {IoIosCloseCircleOutline} from "react-icons/io"
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,44 +24,18 @@ const Nav = () => {
   };
 
   return (
-<nav className="flex items-center justify-end mt-10 mr-10">
+<nav className="flex items-center justify-end mt-5">
   <div className="relative">
     <button
       onClick={toggleMenu}
-      className={`focus:outline-none w-10 h-10 flex items-center justify-center text-blue-500 hover:text-white transition-all transform ${
-        isOpen ? "rotate-180" : "rotate-0"
-      }`}
+      className={`focus:outline-none w-10 h-0 flex items-center justify-center text-white hover:text-orange-200 transition-all transform ${
+        isOpen ? "rotate-180 -translate-y-2" : "rotate-0 translate-y-0"
+      } absolute top-0 right-0 md:right-4 lg:right-6 lg:-translate-y-2`}
     >
-      {isOpen ? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M5 15l7-7 7 7"
-          />
-        </svg>
+      {isOpen ? ( 
+        <IoIosCloseCircleOutline size={26} /> // Ajusta el tamaño del icono aquí (ejemplo: size={24})
       ) : (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
+        <CgMenuGridR size={26} /> // Ajusta el tamaño del icono aquí (ejemplo: size={24})
       )}
     </button>
     <div
@@ -71,7 +47,7 @@ const Nav = () => {
         <li>
           <Link
             to={"/"}
-            className="text-lg block px-4 py-2 hover:bg-blue-500 hover:text-white transition-all"
+            className="text-lg block px-4 py-2 hover:bg-orange-300 hover:text-white transition-all"
             onClick={toggleMenu}
           >
             Logga in
@@ -80,17 +56,18 @@ const Nav = () => {
         <li>
           <Link
             to={"/register"}
-            className="text-lg block px-4 py-2 hover:bg-blue-500 hover:text-white transition-all"
+            className="text-lg block px-4 py-2 hover:bg-orange-300 hover:text-white transition-all"
             onClick={toggleMenu}
           >
             Bli medlem
           </Link>
         </li>
-       
       </ul>
     </div>
   </div>
 </nav>
+
+
 
 
 
