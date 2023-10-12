@@ -10,7 +10,8 @@ function App() {
       <Nav></Nav>
 
       <Outlet  />
-      <Footer></Footer></div>
+     </div> 
+     <Footer></Footer>
       
     </>
   );

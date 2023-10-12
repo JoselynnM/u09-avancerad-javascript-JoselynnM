@@ -55,10 +55,10 @@ const Login = () => {
   <div className="min-h-scren flex flex-col p-40 mx-20 -mt-5  ">
     
     <div className="relative w-[480px] h-[520px] bg-white rounded-lg overflow-hidden">
-      <div className="absolute w-[480px] h-[520px] bg-gradient-to-r from-orange-500 via-orange-400 
+      <div className="absolute w-[480px] h-[520px] bg-gradient-to-r from-orange-800 via-orange-300 
       to-transparent -top-[50%] -left-[50%]
       animate-spin-slow origin-bottom-right"></div>
-         <div className="absolute w-[480px] h-[520px] bg-gradient-to-r from-orange-500 via-orange-400 
+         <div className="absolute w-[480px] h-[520px] bg-gradient-to-r from-orange-800 via-orange-300 
       to-transparent -top-[50%] -left-[50%]
       animate-spin-delay origin-bottom-right"></div>
       <div className="absolute inset-1 bg-gray-100 rounded-lg z-10 p-5">
@@ -75,11 +75,11 @@ const Login = () => {
               placeholder=""
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="relative z-10 border-0 border-b-2 border-slate-500
+              className="relative z-10 border-0 border-b-2 border-orange-200
               h-10 bg-transparent text-black 
               outline-none px-2 peer" 
             />
-            <i className="bg-orange-100 rounded w-full bottom-0 
+            <i className="bg-orange-300 rounded w-full bottom-0 
             left-0 absolute h-10 -z-10 duration-200 origin-bottom 
             ransform peer-focus:h-10 peer-placeholder-shown:h-[0.5px]" />
             <label
@@ -106,10 +106,10 @@ const Login = () => {
               placeholder=""
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="relative z-10 border-0 border-b-2 border-slate-500
+              className="relative z-10 border-0 border-b-2 border-orange-200
               h-10 bg-transparent text-black
               outline-none px-2 peer"            />
-          <i className="bg-orange-100 rounded w-full bottom-0 
+          <i className="bg-orange-300 rounded w-full bottom-0 
             left-0 absolute h-10 -z-10 duration-200 origin-bottom 
             ransform peer-focus:h-10 peer-placeholder-shown:h-[0.5px]" />
             <label
