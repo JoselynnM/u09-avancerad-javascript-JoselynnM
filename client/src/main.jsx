@@ -14,6 +14,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store.jsx'
 import Books from './pages/Books.jsx';
 import { CategoryList } from './components/CategoryList';
+import { ArticlesContainer } from './components/ArticlesContainer.jsx';
 
 
 
@@ -58,11 +59,13 @@ const router = createBrowserRouter([
         path: "",
         element: 
         <main className="px-4 pt-6 ">
-        <div className="lg:flex md:gap-7">
+        <div className="lg:flex lg:gap-8">
         <Home />
-        </div>
+        </div>  
+        <ArticlesContainer />
         </main>
       },
+     
       {
         path: "category-list",
         element: <CategoryList />,

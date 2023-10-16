@@ -27,9 +27,9 @@ const Search = () => {
   <div className="relative flex-1 w-full lg:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
     <div className="p-6">
       <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-        1. Lysen
+        1. Baby on board
       </h5>
-      <img src='/images/lightcar.webp' alt='lightcar' className='w-full rounded-lg' />
+      <img src='/images/bild5.png' alt='lightcar' className='w-full rounded-lg' />
       <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
         The place is close to Barceloneta Beach and bus stop just 2 min by walk
         and near to where you can enjoy the main night life in
@@ -43,9 +43,9 @@ const Search = () => {
   <div className="relative flex-1 w-full lg:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
     <div className="p-6">
       <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-        1. Lysen
+        1. The light
       </h5>
-      <img src='/images/lightcar.webp' alt='lightcar' className='w-full rounded-lg' />
+      <img src='/images/hjul.jpeg' alt='lightcar' className='w-full rounded-lg' />
       <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
         The place is close to Barceloneta Beach and bus stop just 2 min by walk
         and near to where you can enjoy the main night life in
@@ -59,9 +59,9 @@ const Search = () => {
   <div className="relative flex-1 w-full  lg:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
     <div className="p-6">
       <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-        1. Lysen
+        1. The light
       </h5>
-      <img src='/images/lightcar.webp' alt='lightcar' className='w-full rounded-lg' />
+      <img src='/images/bild2.jpg' alt='lightcar' className='w-full rounded-lg' />
       <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
         The place is close to Barceloneta Beach and bus stop just 2 min by walk
         and near to where you can enjoy the main night life in

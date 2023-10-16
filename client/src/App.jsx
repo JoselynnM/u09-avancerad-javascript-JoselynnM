@@ -6,9 +6,9 @@ function App() {
   return (
     <>
      
-      <div className="bg-[url('/images/roadbg.webp')] p-20 w-full h-200 md:h-150 lg:h-144 bg-cover bg-center">
+      <div className="bg-[url('/images/roadsss.jpg')] p-20 w-full h-200 md:h-150 lg:h-144 bg-cover bg-center">
       <Nav></Nav>
-
+   
       <Outlet  />
      </div> 
      <Footer></Footer>
