@@ -54,11 +54,6 @@ function Home() {
          title='Eco-Friendly Driving' 
          text='Reduce your carbon footprint while on the road.'/>
 </aside>
-
-
-
-
- 
 </>
 
 
