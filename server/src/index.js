@@ -5,7 +5,6 @@ import mongoose from "mongoose";
 import multer from "multer";
 import { userRouter } from "./routes/users.js";
 
-
 const app = express();
 
 //middleware
@@ -20,9 +19,11 @@ const upload = multer({ dest: "uploads/" });
 app.use("/auth", userRouter);
 app.use("/api", userRouter);
 
-
 mongoose
-  .connect("mongodb://localhost:27017/" && "mongodb+srv://sofiamoreta:Joselyn2011@cluster0.vmn1ct2.mongodb.net/Cluster0?retryWrites=true&w=majority")
+  .connect(
+    "mongodb://localhost:27017/" &&
+      "mongodb+srv://sofiamoreta:Joselyn2011@cluster0.vmn1ct2.mongodb.net/Cluster0?retryWrites=true&w=majority"
+  )
   .then(() => {
     console.log("Connected to MongoDB");
   })
