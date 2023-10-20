@@ -14,6 +14,8 @@ function Navbar() {
   let profileUrl = window.localStorage.getItem("username");
   const [cookies, , removeCookies] = useCookies(["access_token"]);
   const [username, setUsername] = useState("");
+  const [profilePicture, setProfilePicture] = useState("");
+
 
   const navigate = useNavigate();
 
@@ -45,6 +47,8 @@ function Navbar() {
           response.data.user.username !== undefined
         ) {
           setUsername(response.data.user.username);
+          setProfilePicture(response.data.user?.profilePicture);
+
         }
       } catch (error) {
         console.error(error);
@@ -70,15 +74,47 @@ function Navbar() {
      <div className="xl:flex xl:flex-wrap bg-slate-50 xl:w-full h-screen">
         <div className="w-2/12 bg-white rounded p-4 shadow-lg max-xl:hidden z-10">
           <div className="flex items-center space-x-4 p-2 mb-5">
+          {!profilePicture ? (
+              <img
+                className="h-16 w-16 rounded-full object-cover"
+                src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
+                alt="Profile Image"
+              />
+            ) : (
+              <img
+                className="h-16 w-16 rounded-full object-cover"
+                src={profilePicture}
+                alt="Profile Image"
+              />
+            )}
             <div>
-              <h4 className="font-bold  text-teal-600 text-3xl capitalize font-serif hover:font-serif tracking-wide">
+              <h4 className="font-bold  text-teal-600 text-xl capitalize font-serif hover:font-serif tracking-wide">
                 Welcome{" "}
                 {username}{" "}
               </h4>
             </div>
           </div>
           <ul className="space-y-2 text-lg">
-    
+     <li>
+              <Link
+                to={`profile/${profileUrl}`}
+                className="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
+              >
+                <span className="text-gray-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78A7.893 7.893 0 0 1 12 20c-1.86 0-3.57-.64-4.93-1.72m11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.928 7.928 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.64 4.83M12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6m0 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 8a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 11Z"
+                    />
+                  </svg>
+                </span>
+                <p>Profile</p>
+              </Link>
+            </li>
             <li>
               <Link
                 to=""
@@ -108,7 +144,7 @@ function Navbar() {
             </li>
            <li>
               <Link
-                to={`profile/${profileUrl}`}
+                to={"chat"}
                 className="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
                 <BsChatRightDots className="text-black w-7 hover:w-8 h-8"/>
                 <p className="font-serif text-black">Chat</p>
@@ -162,7 +198,7 @@ function Navbar() {
             <p className="font-serif text-sm text-black">Quiz</p>
           </Link>
           <Link
-            to={`profile/${profileUrl}`}
+            to={"chat"}
             className="flex flex-col items-center  p-2 rounded-md font-medium  hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
           >
           <BsChatRightDots className="text-black w-7  hover:w-8 h-8"/>

@@ -15,6 +15,9 @@ import { store } from "./redux/store.jsx";
 import Books from "./pages/Books.jsx";
 import { CategoryList } from "./components/CategoryList";
 import { ArticlesContainer } from "./components/ArticlesContainer.jsx";
+import EditProfile from "./pages/editProfile.jsx";
+import UserProfile from "./pages/UserProfile.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -73,6 +76,15 @@ const router = createBrowserRouter([
       },
       {
         path: "profile/:username",
+        element: 
+          <UserProfile />,
+      },
+      {
+        path: "edit-profile/:id",
+        element: <EditProfile />,
+      },
+      {
+        path: "chat",
         element: (
           <React.StrictMode>
             <Provider store={store}>
