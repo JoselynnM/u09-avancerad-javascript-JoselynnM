@@ -18,7 +18,7 @@ Built with
 
 **Getting Started **
 
-Create a MongoDB cluster 
+Create a MongoDB 
 
 1. Visit https://mongodb.com and register an account
 
