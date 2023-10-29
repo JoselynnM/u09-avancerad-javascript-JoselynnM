@@ -4,6 +4,8 @@ const Search = () => {
   const [isopen, setIsopen] = useState(false);
   const [isopen1, setIsopen1] = useState(false);
   const [isopen2, setIsopen2] = useState(false);
+  const [isopen3, setIsopen3] = useState(false);
+
 
   const videoSource = "/imgvideo/video2.mp4";
   const videoSource3= "/imgvideo/video.mov";
@@ -137,23 +139,21 @@ const Search = () => {
         <div className="relative flex-1 w-full lg:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
           <div className="p-6">
             <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-              1. Lysen
+              1. The vehicle's Wheels
             </h5>
             <img
-              src="/images/lightcar.webp"
+              src="/images/wheel.jpg"
               alt="lightcar"
               className="w-full rounded-lg"
             />
             <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-              The place is close to Barceloneta Beach and bus stop just 2 min by
-              walk and near to where you can enjoy the main night life in
-              Barcelona.
+            The wheels of your car are much more than simple rubber rings. They are a fundamental part 
             </p>
           </div>
           <div className="p-6 pt-0">
             <button
               className="bg-cyan-500 py-2 px-6 rounded-lg text-white font-bold"
-              onClick={() => setIsopen(true)}
+              onClick={() => setIsopen3(true)}
             >
               Read more
             </button>
@@ -507,7 +507,82 @@ const Search = () => {
         </div>
       )}
 
+      
+{isopen3 && (
+        <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
+          <div className="bg-white p-5 rounded flex flex-col gap-5 shadow-xl w-96">
+            <div className="border-b-2 border-gray-300 p-2 mb-2 rounded-tl-lg rounded-tr-lg">
+              <h2 className="text-xl font-semibold font-[Poppins]">
+              Chapter 3: The Vehicle's Wheels
+              </h2>
+            </div>
+            <div style={{ maxHeight: "400px", overflowY: "auto" }}>
+              <strong>Introduction</strong>
+              <p>  The wheels of your car are much more than simple rubber rings. They are a fundamental part of your vehicle and play a crucial role in your safety and driving comfort. In this chapter, we will explore in detail everything you need to know about your vehicle's wheels.
+              </p>
+              <p className="text-gray-700  pt-3 leading-relaxed"/>
+                <strong>Importance of Wheels</strong> 
+                <br/>
+                <p >The wheels of your vehicle are the only point of contact between the car and the road. This means they are responsible for traction, steering, and braking capability. Keeping your wheels in good condition is essential to ensure safe and efficient driving.</p>
+                <br />
+                <strong>Components of Wheels</strong>
+                <br />
+                <p>Your vehicle's wheels consist of two main components: the rim and the tire.</p>
+                <li><strong>Rim:</strong></li>The rim is the metallic part of the wheel that holds the tire. It comes in various sizes and designs and is designed to withstand tire pressure and provide stability to the vehicle.
+                <li><strong>Tire:</strong></li> The tire is the rubber part that makes contact with the road. It comes in different types, each designed for specific conditions and uses. Tires influence traction, comfort, and fuel efficiency.
+               <br />
+               <br />
+               <strong>Wheel Maintenance</strong> <br /> 
+               <p>Proper wheel maintenance is crucial for ensuring safe driving and extending the life of your tires. Here are some key guidelines:</p>             
+                
+                <strong>1. Tire Pressure: </strong>
+                You should regularly check tire pressure and ensure they are inflated according to the manufacturer's specifications. Under-inflated tires can negatively impact traction and fuel efficiency. <br />
+                <strong>2. Wheel Rotation: </strong> Regularly rotating your wheels helps wear the tires evenly and extends their lifespan. <br />
+                <strong>3. Alignment:</strong>
+                Proper wheel alignment ensures that your wheels are correctly aligned, improving handling and preventing uneven tire wear. <br />
+                <strong>4. Visual Inspection: </strong> You should visually inspect your tires for cuts, uneven wear, or damage. If you find any issues, it's important to address them immediately. <br />
+                 <br />
 
+                 <h1 className="font-bold mt-3">5. The Importance of Tire Tread Depth</h1>
+                 <p>Tire tread depth is a critical aspect of road safety. The grooves and channels on your tires serve several vital functions:</p>
+                 <li><ins>Traction:</ins> </li> The tread pattern provides grip, enabling your tires to maintain control on the road. <br />
+                 <li><ins>Water Dispersion:</ins></li> Treads help divert water away from the tire's surface, reducing the risk of hydroplaning on wet roads. <br />
+                 <li><ins>Wear Resistance:</ins></li> Proper tread depth increases the lifespan of your tires. <br />
+                 <h1 className="font-bold mt-3">6. Different Types of Tread Patterns</h1>
+                 <p>Tires come in various tread patterns, each designed for specific driving conditions. Understanding these patterns is essential for choosing the right tires for your needs.</p>
+                  <h3> <strong>1. Summer Tires:</strong></h3>
+                 <li>Tread Depth: Less deep</li>
+                 <li>Ideal Use: Dry and warm conditions</li>
+                 <li>Performance: Excellent handling on dry roads</li>
+                 <h3> <strong>2. All-Season Tires:</strong></h3>
+                 <li>Tread Depth: Moderate</li>
+                 <li>Ideal Use: Versatile, suitable for various conditions</li>
+                 <li>Performance: A balance between performance and versatility</li>
+                 <h3> <strong>3. Winter Tires:</strong></h3>
+                 <li>Tread Depth: Deep and aggressive</li>
+                 <li>Ideal Use: Icy and snowy conditions</li>
+                 <li>Performance: Superior traction in cold weather</li>
+                 <h3> <strong>4. High-Performance Tires:</strong></h3>
+                 <li>Tread Depth: Less deep</li>
+                 <li>Ideal Use: Dry roads, sporty driving</li>
+                 <li>Performance: Excellent dry road handling</li>
+                 <h3> <strong>Legal Minimum Tread Depth</strong></h3>
+                 <img
+                src="/images/wheel.jpeg"
+                alt="image"
+                className="w-full rounded-lg mt-2"
+              />          
+            </div>
+
+            <button
+              className="bg-red-500 py-2 px-6 rounded-lg text-white font-bold"
+              onClick={() => setIsopen3(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
 
 
