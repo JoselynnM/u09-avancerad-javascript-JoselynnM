@@ -38,13 +38,13 @@ export const questions = [
   {
     id: 1,
     difficulty: "Easy",
-    question: "¿Qué evento inició la Primera Guerra Mundial?",
+    question: "What gas, released by cars, contributes to the greenhouse effect and climate change?",
     category: environment,
-    correct_answer: "El asesinato del Archiduque Franz Ferdinand de Austria",
+    correct_answer: "Carbon dioxide (CO2)",
     incorrect_answers: [
-      "El hundimiento del Titanic",
-      "La invasión de Polonia por Alemania",
-      "La Revolución Francesa",
+      "Methane (CH4",
+      "Nitrous oxide (N2O)",
+      "Hydrofluorocarbons (HFCs)",
     ],
   },
   {
