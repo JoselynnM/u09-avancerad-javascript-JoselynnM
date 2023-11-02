@@ -8,13 +8,15 @@ const [
 	imgLight,
 	imgEnvironment,
 	imgTrafficlight,
-	imgSign,
+	imgAccidents,
+	imgDark,
+	imgCity,
 ] = imgs;
 
 export const CategoryList = () => {
 	return (
-		<div className='flex flex-row flex-wrap justify-center gap-5 mt-10'>
-			{/* Category Link Ciencia */}
+		<div className='flex flex-row flex-wrap justify-center gap-6 mt-10'>
+			{/* Category Link Card */}
 			<CategoryCard
 				category={categories.car}
 				src={imgCar}
@@ -56,26 +58,26 @@ export const CategoryList = () => {
 				alt={`Categoría ${categories.trafficlight}`}
 				gradientColor='from-amber-400 to-emerald-600'
 			/>		
-			{/* Category Link Light */}
+			{/* Category Link Accidents */}
 			<CategoryCard
-				category={categories.light}
-				src={imgLight}
-				alt={`Categoría ${categories.light}`}
-				gradientColor='from-cyan-200 to-lime-200'
+				category={categories.accidents}
+				src={imgAccidents}
+				alt={`Categoría ${categories.accidents}`}
+				gradientColor='from-red-300 to-purple-200'
 			/>
-			{/* Category Link Environment */}
+			{/* Category Link Dark */}
 			<CategoryCard
-				category={categories.environment}
-				src={imgEnvironment}
-				alt={`Categoría ${categories.environment}`}
-				gradientColor='from-sky-300 to-indigo-900'
+				category={categories.dark}
+				src={imgDark}
+				alt={`Categoría ${categories.dark}`}
+				gradientColor='from-lime-600 to-cyan-200 '
 			/>
-			{/* Category Link Sign */}
+			{/* Category Link City */}
 			<CategoryCard
-				category={categories.sign}
-				src={imgSign}
-				alt={`Categoría ${categories.sign}`}
-				gradientColor='from-amber-400 to-emerald-600'
+				category={categories.city}
+				src={imgCity}
+				alt={`Categoría ${categories.city}`}
+				gradientColor='from-purple-600 to-pink-200'
 			/>		
 		</div>
 	);
