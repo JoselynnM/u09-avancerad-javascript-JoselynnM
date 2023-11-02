@@ -4,10 +4,9 @@ import Wheel from "./assets/wheel.png";
 import Light from "./assets/light.png";
 import Environment from "./assets/environment.png";
 import Trafficlight from "./assets/trafficlight.png";
-import Accidents from "./assets/accidents.png"
-import Dark from "./assets/dark.png"
-import City from "./assets/city.png"
-
+import Accidents from "./assets/accidents.png";
+import Dark from "./assets/dark.png";
+import City from "./assets/city.png";
 
 export const imgs = [
   Car,
@@ -49,7 +48,8 @@ export const questions = [
   {
     id: 1,
     difficulty: "Easy",
-    question: "What gas, released by cars, contributes to the greenhouse effect and climate change?",
+    question:
+      "What gas, released by cars, contributes to the greenhouse effect and climate change?",
     category: environment,
     correct_answer: "Carbon dioxide (CO2)",
     incorrect_answers: [
@@ -942,8 +942,7 @@ export const questions = [
     question:
       "Which of the following activities is the most dangerous while driving?",
     category: accidents,
-    correct_answer:
-      " Talking on the phone",
+    correct_answer: " Talking on the phone",
     incorrect_answers: [
       " Listening to music",
       "Enhance vehicle visibility during the day.",
@@ -956,22 +955,15 @@ export const questions = [
     question:
       "What is the legal blood alcohol limit for driving in most places?",
     category: accidents,
-    correct_answer:
-      " 0.08%",
-    incorrect_answers: [
-      " 0.02%",
-      "0.05%",
-      "0.10%",
-    ],
+    correct_answer: " 0.08%",
+    incorrect_answers: [" 0.02%", "0.05%", "0.10%"],
   },
   {
     id: 85,
     difficulty: "Easy",
-    question:
-      "What should drivers do when approaching a yellow traffic light?",
+    question: "What should drivers do when approaching a yellow traffic light?",
     category: accidents,
-    correct_answer:
-      " Slow down and prepare to stop if safe",
+    correct_answer: " Slow down and prepare to stop if safe",
     incorrect_answers: [
       " Speed up to cross before it turns red",
       " Come to a complete stop",
@@ -984,8 +976,7 @@ export const questions = [
     question:
       "Which of the following actions is safe when overtaking another vehicle on a two-way road?",
     category: accidents,
-    correct_answer:
-      " Using the turn signal",
+    correct_answer: " Using the turn signal",
     incorrect_answers: [
       "Overtaking in a curve",
       "Overtaking in a no-passing zone",
@@ -998,8 +989,7 @@ export const questions = [
     question:
       "What should a driver do when encountering a pedestrian at an uncontrolled pedestrian crosswalk?",
     category: accidents,
-    correct_answer:
-      " Yield the right-of-way to the pedestrian",
+    correct_answer: " Yield the right-of-way to the pedestrian",
     incorrect_answers: [
       "Continue driving without stopping",
       "Honk the horn to hurry the pedestrian",
@@ -1009,11 +999,9 @@ export const questions = [
   {
     id: 88,
     difficulty: "Easy",
-    question:
-      "What is a common cause of accidents on slippery roads?",
+    question: "What is a common cause of accidents on slippery roads?",
     category: accidents,
-    correct_answer:
-      "  Ignoring road conditions",
+    correct_answer: "  Ignoring road conditions",
     incorrect_answers: [
       " Increasing following distance",
       "Reducing speed",
@@ -1026,8 +1014,7 @@ export const questions = [
     question:
       "What additional precautions should drivers take when driving on snowy roads?",
     category: dark,
-    correct_answer:
-      "Reduce speed and increase following distance",
+    correct_answer: "Reduce speed and increase following distance",
     incorrect_answers: [
       " Increase speed to maintain control",
       "Use summer tires",
@@ -1040,8 +1027,7 @@ export const questions = [
     question:
       "What lights should drivers use when driving in the rain during the daytime?",
     category: dark,
-    correct_answer:
-      "Low beams",
+    correct_answer: "Low beams",
     incorrect_answers: [
       " Fog lights",
       "High beams",
@@ -1054,8 +1040,7 @@ export const questions = [
     question:
       "What should drivers do when facing an intense snowstorm on the road?",
     category: dark,
-    correct_answer:
-      " Reduce speed and keep lights on",
+    correct_answer: " Reduce speed and keep lights on",
     incorrect_answers: [
       " Accelerate to get out of the storm faster",
       "Activate hazard lights",
@@ -1065,11 +1050,9 @@ export const questions = [
   {
     id: 92,
     difficulty: "Medium",
-    question:
-      "What is the leading cause of accidents on wet roads?",
+    question: "What is the leading cause of accidents on wet roads?",
     category: dark,
-    correct_answer:
-      "  Hydroplaning",
+    correct_answer: "  Hydroplaning",
     incorrect_answers: [
       "Adequate following distance",
       "Constant speed",
@@ -1079,16 +1062,10 @@ export const questions = [
   {
     id: 93,
     difficulty: "Easy",
-    question:
-      "What type of brakes are most effective on icy or snowy roads?",
+    question: "What type of brakes are most effective on icy or snowy roads?",
     category: dark,
-    correct_answer:
-      "Anti-lock brakes (ABS)",
-    incorrect_answers: [
-      "Handbrakes",
-      "Drum brakes",
-      "Disc brakes",
-    ],
+    correct_answer: "Anti-lock brakes (ABS)",
+    incorrect_answers: ["Handbrakes", "Drum brakes", "Disc brakes"],
   },
   {
     id: 94,
@@ -1096,8 +1073,7 @@ export const questions = [
     question:
       "What is the generally allowed maximum speed in residential or urban areas?",
     category: city,
-    correct_answer:
-      "30 mph (48 km/h)",
+    correct_answer: "30 mph (48 km/h)",
     incorrect_answers: [
       "60 mph (96 km/h)",
       "45 mph (72 km/h)",
@@ -1110,8 +1086,7 @@ export const questions = [
     question:
       "What does a broken yellow line in the middle of the road signify?",
     category: city,
-    correct_answer:
-      "Passing with caution",
+    correct_answer: "Passing with caution",
     incorrect_answers: [
       "No passing",
       "Loading and unloading zone",
@@ -1124,8 +1099,7 @@ export const questions = [
     question:
       "What is the basic rule when turning at an intersection without traffic signs or signals?",
     category: city,
-    correct_answer:
-      "Yield to the vehicle on the right",
+    correct_answer: "Yield to the vehicle on the right",
     incorrect_answers: [
       "Yield to the vehicle on the left",
       "Have the right-of-way",
@@ -1138,8 +1112,7 @@ export const questions = [
     question:
       "When is it permissible to pass a stopped school bus with flashing red lights?",
     category: city,
-    correct_answer:
-      "Only if there are no children crossing the street",
+    correct_answer: "Only if there are no children crossing the street",
     incorrect_answers: [
       "Never allowed to pass",
       "Whenever traffic allows it",
@@ -1152,8 +1125,7 @@ export const questions = [
     question:
       "What should a driver do when approaching a flashing yellow traffic light?",
     category: city,
-    correct_answer:
-      "Slow down and prepare to stop",
+    correct_answer: "Slow down and prepare to stop",
     incorrect_answers: [
       "Speed up to cross before it turns red",
       "Come to a complete stop",
@@ -1166,13 +1138,11 @@ export const questions = [
     question:
       "What is the minimum distance that must be maintained behind a cyclist when overtaking in the city?",
     category: city,
-    correct_answer:
-      "3 feet (1 meter)",
+    correct_answer: "3 feet (1 meter)",
     incorrect_answers: [
       "1 foot (30 cm)",
       "5 feet (1.5 meters)",
       "10 feet (3 meters)",
     ],
   },
-
 ];

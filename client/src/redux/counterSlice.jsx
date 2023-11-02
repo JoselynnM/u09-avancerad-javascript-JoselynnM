@@ -1,23 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: null,
   page3: false,
-}
+};
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   initialState,
   reducers: {
     addAge: (state, action) => {
-        state.value = action.payload
+      state.value = action.payload;
     },
     isPage: (state, action) => {
-        state.page3 = action.payload
+      state.page3 = action.payload;
     },
   },
-})
+});
 
-export const { addAge, isPage } = counterSlice.actions
+export const { addAge, isPage } = counterSlice.actions;
 
-export default counterSlice.reducer
+export default counterSlice.reducer;

@@ -1,16 +1,14 @@
-import React from 'react';
-import { createClientMessage } from 'react-chatbot-kit';
-import AgeDropdown from './AgeDropdown';
-import { useDispatch } from 'react-redux';
-import { isPage } from '../redux/counterSlice.jsx';
-
+import React from "react";
+import { createClientMessage } from "react-chatbot-kit";
+import AgeDropdown from "./AgeDropdown";
+import { useDispatch } from "react-redux";
+import { isPage } from "../redux/counterSlice.jsx";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleHello = () => {
-    const botMessage = createChatBotMessage('Hello. Nice to meet you.');
+    const botMessage = createChatBotMessage("Hello. Nice to meet you.");
 
     setState((prev) => ({
       ...prev,
@@ -19,8 +17,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const handleGot = () => {
-    const message = createClientMessage('Got it!');
-    const botMessage = createChatBotMessage('Enter your Name and age ',);
+    const message = createClientMessage("Got it!");
+    const botMessage = createChatBotMessage("Enter your Name and age ");
 
     setState((prev) => ({
       ...prev,
@@ -34,10 +32,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       ...prev,
       messages: [...prev.messages, botMessage, age],
     }));
-    handleNumber()
+    handleNumber();
   };
   const handleName = () => {
-    const botMessage = createChatBotMessage(<AgeDropdown showAge={showAge}/>,);
+    const botMessage = createChatBotMessage(<AgeDropdown showAge={showAge} />);
 
     setState((prev) => ({
       ...prev,
@@ -46,35 +44,33 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   };
 
   const handleNumber = () => {
-    const botMessage = createChatBotMessage('Thank you. In a 5 seconds, we will help you');
+    const botMessage = createChatBotMessage(
+      "Thank you. In a 5 seconds, we will help you"
+    );
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
     }));
 
     setTimeout(() => {
-      handleFinal()
+      handleFinal();
     }, 3000);
   };
 
   const handleFinal = () => {
-    dispatch(isPage(true))
+    dispatch(isPage(true));
   };
 
   const handleDog = () => {
-    const botMessage = createChatBotMessage(
-      "Here's a cars  picture for you!",
-      {
-        widget: 'dogPicture',
-      }
-    );
+    const botMessage = createChatBotMessage("Here's a cars  picture for you!", {
+      widget: "dogPicture",
+    });
 
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
     }));
   };
-
 
   return (
     <div>
@@ -91,7 +87,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         });
       })}
     </div>
-  )
+  );
 };
 
 export default ActionProvider;

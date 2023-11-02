@@ -1,20 +1,17 @@
 // in MessageParser.js
-import React from 'react';
-
+import React from "react";
 
 const MessageParser = ({ children, actions }) => {
-  
   const parse = (message) => {
+    const lower = message.toLowerCase();
 
-    const lower = message.toLowerCase()
-
-    if (message.includes('hello')) {
+    if (message.includes("hello")) {
       actions.handleHello();
     }
-    if (message.includes('car')) {
+    if (message.includes("car")) {
       actions.handleDog();
     }
-    if (lower.includes('sofia','maria','juan') ) {
+    if (lower.includes("sofia", "maria", "juan")) {
       actions.handleName();
     }
     if (message.toLowerCase().includes("27")) {

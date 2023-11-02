@@ -2,20 +2,18 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {AiOutlineCar} from "react-icons/ai";
-import {BiBook} from "react-icons/bi"
-import {MdOutlineQuiz} from "react-icons/md"
-import {BsChatRightDots} from "react-icons/bs"
-import {RiLogoutBoxLine} from "react-icons/ri"
-import {RiLogoutBoxRLine} from "react-icons/ri"
-
+import { AiOutlineCar } from "react-icons/ai";
+import { BiBook } from "react-icons/bi";
+import { MdOutlineQuiz } from "react-icons/md";
+import { BsChatRightDots } from "react-icons/bs";
+import { RiLogoutBoxLine } from "react-icons/ri";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 
 function Navbar() {
   let profileUrl = window.localStorage.getItem("username");
   const [cookies, , removeCookies] = useCookies(["access_token"]);
   const [username, setUsername] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
-
 
   const navigate = useNavigate();
 
@@ -48,7 +46,6 @@ function Navbar() {
         ) {
           setUsername(response.data.user.username);
           setProfilePicture(response.data.user?.profilePicture);
-
         }
       } catch (error) {
         console.error(error);
@@ -66,15 +63,13 @@ function Navbar() {
     navigate("/");
   };
 
-
   return (
     <>
-      
-{/* Navbar to Desktop  */}
-     <div className="xl:flex xl:flex-wrap bg-slate-50 xl:w-full h-screen">
+      {/* Navbar to Desktop  */}
+      <div className="xl:flex xl:flex-wrap bg-slate-50 xl:w-full h-screen">
         <div className="w-2/12 bg-white rounded p-4 shadow-lg max-xl:hidden z-10">
           <div className="flex items-center space-x-4 p-2 mb-5">
-          {!profilePicture ? (
+            {!profilePicture ? (
               <img
                 className="h-16 w-16 rounded-full object-cover"
                 src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
@@ -89,13 +84,12 @@ function Navbar() {
             )}
             <div>
               <h4 className="font-bold  text-teal-600 text-xl capitalize font-serif hover:font-serif tracking-wide">
-                Welcome{" "}
-                {username}{" "}
+                Welcome {username}{" "}
               </h4>
             </div>
           </div>
           <ul className="space-y-2 text-lg">
-     <li>
+            <li>
               <Link
                 to={`profile/${profileUrl}`}
                 className="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
@@ -120,7 +114,7 @@ function Navbar() {
                 to=""
                 className="flex items-center space-x-3 text-black p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
               >
-                <AiOutlineCar  className="text-black w-7  hover:w-8 h-8"/>
+                <AiOutlineCar className="text-black w-7  hover:w-8 h-8" />
                 <p className="font-serif text-black ">Home</p>
               </Link>
             </li>
@@ -129,7 +123,7 @@ function Navbar() {
                 to="books"
                 className="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
               >
-                <BiBook className="text-black w-7  hover:w-8 h-8"/>
+                <BiBook className="text-black w-7  hover:w-8 h-8" />
                 <p className="font-serif text-black">Book</p>
               </Link>
             </li>
@@ -142,22 +136,23 @@ function Navbar() {
                 <p className="font-serif text-black">Quiz</p>
               </Link>
             </li>
-           <li>
+            <li>
               <Link
                 to={"chat"}
-                className="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline">
-                <BsChatRightDots className="text-black w-7 hover:w-8 h-8"/>
+                className="flex items-center space-x-3 text-gray-700 p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
+              >
+                <BsChatRightDots className="text-black w-7 hover:w-8 h-8" />
                 <p className="font-serif text-black">Chat</p>
               </Link>
             </li>
-            </ul>
+          </ul>
 
           <div className="absolute bottom-7 space-y-2  text-lg">
             <button
               onClick={logout}
               className=" font-serif text-black flex items-center space-x-3  p-2 rounded-md font-medium hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
             >
-             <RiLogoutBoxLine className="text-black w-7 hover:w-8 h-8" />
+              <RiLogoutBoxLine className="text-black w-7 hover:w-8 h-8" />
               Logout
             </button>
           </div>
@@ -168,7 +163,7 @@ function Navbar() {
             <Outlet />
           </div>
         </div>
-      </div> 
+      </div>
 
       {/* Navbar to Phone */}
 
@@ -178,22 +173,22 @@ function Navbar() {
             to=""
             className="flex flex-col items-center text-gray-700 p-2 rounded-md font-medium  hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
           >
-          <AiOutlineCar  className="text-black w-7  hover:w-8 h-8"/>
-            <p className="font-serif text-sm text-black" >Home</p>
-             </Link>
-             
-             <Link
+            <AiOutlineCar className="text-black w-7  hover:w-8 h-8" />
+            <p className="font-serif text-sm text-black">Home</p>
+          </Link>
+
+          <Link
             to="books"
             className="flex flex-col items-center text-gray-700 p-2 rounded-md font-medium  hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
           >
-           <BiBook className="text-black w-7  hover:w-8 h-8"/>
-            <p  className="font-serif text-sm text-black" >Books</p>
+            <BiBook className="text-black w-7  hover:w-8 h-8" />
+            <p className="font-serif text-sm text-black">Books</p>
           </Link>
           <Link
             to="category-list"
             className="flex flex-col items-center p-2 rounded-md font-medium  hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
           >
-          <MdOutlineQuiz className="text-black w-7  hover:w-8 h-8" />
+            <MdOutlineQuiz className="text-black w-7  hover:w-8 h-8" />
 
             <p className="font-serif text-sm text-black">Quiz</p>
           </Link>
@@ -201,7 +196,7 @@ function Navbar() {
             to={"chat"}
             className="flex flex-col items-center  p-2 rounded-md font-medium  hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
           >
-          <BsChatRightDots className="text-black w-7  hover:w-8 h-8"/>
+            <BsChatRightDots className="text-black w-7  hover:w-8 h-8" />
 
             <p className="font-serif text-sm text-black">Chat</p>
           </Link>
@@ -209,12 +204,9 @@ function Navbar() {
             onClick={logout}
             className="flex flex-col items-center text-black p-2 rounded-md font-serif text-sm  hover:bg-gray-200 focus:bg-gray-200 focus:shadow-outline"
           >
-         <RiLogoutBoxRLine  className="text-black w-7  hover:w-8 h-8"/>
-
+            <RiLogoutBoxRLine className="text-black w-7  hover:w-8 h-8" />
             Log Out
           </button>
-
-          
         </div>
       </div>
     </>

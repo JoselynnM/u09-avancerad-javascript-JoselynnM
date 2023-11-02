@@ -1,26 +1,25 @@
 // in config.js
-import { createChatBotMessage } from 'react-chatbot-kit';
-import DogPicture from './DogPicture.jsx'
-import Final from './Final.jsx';
-import Overview from '../widgets/overview.jsx';
-import CustomMessage from './customMesage.jsx';
-import Age from './age.jsx'
+import { createChatBotMessage } from "react-chatbot-kit";
+import DogPicture from "./DogPicture.jsx";
+import Final from "./Final.jsx";
+import Overview from "../widgets/overview.jsx";
+import CustomMessage from "./customMesage.jsx";
+import Age from "./age.jsx";
 
 const botName = "Despacito Service";
 
 const config = {
-
-  initialMessages: [createChatBotMessage(`Hello, welcome, how can I help you?`,
-  {
-    withAvatar: true,
-    delay: 400,
-    widget: "overview"
-  }),
-],
+  initialMessages: [
+    createChatBotMessage(`Hello, welcome, how can I help you?`, {
+      withAvatar: true,
+      delay: 400,
+      widget: "overview",
+    }),
+  ],
   botName: botName,
   state: {
-    gist: '',
-    infoBox: '',
+    gist: "",
+    infoBox: "",
   },
   customComponents: {},
   customMessages: {
@@ -32,23 +31,23 @@ const config = {
     {
       widgetName: "overview",
       widgetFunc: (props) => <Overview {...props} />,
-      mapStateToProps: ["messages"]
+      mapStateToProps: ["messages"],
     },
     {
-      widgetName: 'dogPicture',
+      widgetName: "dogPicture",
       widgetFunc: (props) => <DogPicture {...props} />,
     },
     {
-      widgetName: 'final',
+      widgetName: "final",
       widgetFunc: (props) => <Final {...props} />,
     },
   ],
   customStyles: {
     botMessageBox: {
-      backgroundColor: '#53c9c4',
+      backgroundColor: "#53c9c4",
     },
     chatButton: {
-      backgroundColor: '#b86dc9',
+      backgroundColor: "#b86dc9",
     },
   },
 };
