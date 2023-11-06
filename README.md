@@ -7,8 +7,9 @@ It's an application designed to help you learn everything you need to know to ob
 
 ## The assignment
 
-The task involves creating your own JavaScript project with a focus on developing a complete application from the initial idea and concept to its implementation.
+The purpose of this task is for you to demonstrate your ability to independently develop a complete application, applying your knowledge and skills from the idea and concept phase to implementation. Your submission should reflect a strong understanding, effective application, and usage of a RESTful API in Node.js with JWT-based authentication and a MongoDB document database.
 
+Additionally, your solution should include the foundational elements for user experience and design. This encompasses a basic digital design structure.
 
 
 ## Built with
