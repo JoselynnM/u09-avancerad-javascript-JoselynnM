@@ -29,9 +29,9 @@ The task involves creating your own JavaScript project with a focus on developin
 
 
 
-**Getting Started**
+## Getting Started
 
-Create a MongoDB 
+**Create a MongoDB**
 
 1. Visit https://mongodb.com and register an account
 
@@ -46,16 +46,30 @@ Create a MongoDB
 
 Installation
 
-1. Clone the repository to your local files
+1. Clone the repository to your local files.
 
 2. Install npm packages for both the front- and backend. Frontend files are located in the /frontend folder. Backend files are located in the root folder.
-
+```bash
 npm install
+```
 
 3. To start the Node server, in the root folder, run:
 
+```bash
 npm run dev
-
+```
 4. To start the Vue server, in the frontend folder, run:
-
+```bash
 npm run serve
+```
+
+
+## License
+Distributed under the MIT License. 
+
+## Contact
+```python
+Author: Joselyn Moreta Guamanzara 
+Email: joselyn.moreta@chasacademy.se
+Lindedin: https://www.linkedin.com/in/sofia-moreta-8a5654265/
+```
