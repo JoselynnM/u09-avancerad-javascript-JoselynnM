@@ -63,9 +63,6 @@ npm run dev
 npm run serve
 ```
 
-## Sitemap
-
-![](/images/despacito.jpg)
 
 ## License
 Distributed under the MIT License. 
