@@ -5,6 +5,10 @@
 
 It's an application designed to help you learn everything you need to know to obtain your driver's license.
 
+# Link for project documentation
+
+https://docs.google.com/document/d/1Y3nvhcSlqCkZlu2fqCxmgwX-2rX7fU13IA_d17jvSww/edit?usp=sharing
+
 ## The assignment
 
 The purpose of this task is for you to demonstrate your ability to independently develop a complete application, applying your knowledge and skills from the idea and concept phase to implementation. Your submission should reflect a strong understanding, effective application, and usage of a RESTful API in Node.js with JWT-based authentication and a MongoDB document database.
