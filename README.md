@@ -7,10 +7,6 @@ It's an application designed to help you learn everything you need to know to ob
 
 LINK: https://654ea6b954d28724d60e3722--dulcet-cobbler-8fd909.netlify.app/
 
-  ![](img/bild1.png)
-
-
-
 # Link for project documentation
 
 *GOOGLE DOC:*
