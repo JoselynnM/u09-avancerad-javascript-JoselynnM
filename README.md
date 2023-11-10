@@ -7,7 +7,11 @@ It's an application designed to help you learn everything you need to know to ob
 
 # Link for project documentation
 
+*GOOGLE DOC:*
 https://docs.google.com/document/d/1Y3nvhcSlqCkZlu2fqCxmgwX-2rX7fU13IA_d17jvSww/edit?usp=sharing
+
+*FIGMA:* 
+https://www.figma.com/file/2HHGEkxueDhBMHLOcadRff/Untitled?type=design&node-id=0%3A1&mode=design&t=pqd6Dk2h1dMbOEUc-1
 
 ## The assignment
 
